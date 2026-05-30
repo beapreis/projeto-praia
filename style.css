@@ -99,27 +99,27 @@ nav a.active {
 }
 
 .titulo-sobre {
-    color: #f56f11;
-    font-size: 70px; 
-    font-family: 'Arial Black', Impact, sans-serif;
-    margin-top: 20px;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;  
+    font-size: 75px;        
+    color: #90ea38;         
+    line-height: 1.1;
+    letter-spacing: -1px;
 }
 
 .foto-sobre {
     width: 100%;         /* Ocupa a largura total do bloco esquerdo */
     max-width: 450px;    /* Define um limite para a foto não ficar gigante em ecrãs enormes */
     align-self: flex-start; /* Alinha à esquerda */
-
+    margin-top: 15px;
 }
 
 .sobre-direito {
     flex: 1; 
     display: flex;
     flex-direction: column;
-    
     /* Como o container agora vai até ao fundo, isto centra os cartões na página perfeita verticalmente */
     justify-content: center; 
-    
     gap: 25px; 
 }
 
@@ -176,4 +176,75 @@ nav a.active {
     display: flex;
     align-items: center;
     transition: transform 0.2s ease;
+}
+
+/***/
+
+.contatos-main {
+    background-color: #f26e11; /* O teu fundo laranja */
+    min-height: calc(100vh - 100px); /* Ocupa a altura restante da página descontando o menu */
+    display: flex;
+    justify-content: center; /* Centra o bloco todo no meio do ecrã */
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* O novo esqueleto que segura as duas caixas lado a lado */
+.contatos-container {
+    display: flex;
+    flex-direction: row; /* Força o alinhamento lado a lado */
+    gap: 40px;           /* Espaço de separação entre a Caixa 1 e a Caixa 2 */
+    width: 90%;
+    max-width: 1200px;   /* Garante que o layout não estica infinitamente em ecrãs gigantes */
+    justify-content: center;
+}
+
+/* As caixas verdes gémeas (Ajustadas com flex: 1 para terem o mesmo tamanho) */
+.box-contato {
+    flex: 1; /* Faz com que as duas caixas ganhem exatamente a mesma largura automaticamente */
+    background-color: #8ae639; /* O teu verde alface */
+    border-radius: 45px;       /* Cantos arredondados modernos */
+    padding: 50px;
+    box-sizing: border-box;    /* Evita que o padding deforme o tamanho das caixas */
+    align-items: center;
+}
+
+/* Os títulos dentro de cada caixa */
+.titulo-contato {
+    font-family: 'Fraunces', serif; /* A tua fonte estilo Tan Buster */
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 45px; /* Reduzi ligeiramente para caber perfeitamente no topo de duas colunas */
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+/* Alinhamento dos dados em grelha dentro das caixas */
+.grid-contato {
+    display: grid;
+    grid-template-columns: 160px 1fr; /* Alinha o rótulo à esquerda e o texto à direita */
+    align-items: start;
+}
+
+/* Rótulos (Telefone, Horário, etc) */
+.label-contato {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Informações escritas */
+.info-contato, .info-contato a {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400; /* A tua DM Sans Regular do Canva */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.4; /* Dá espaço entre linhas caso o texto quebre, como no horário */
+}
+
+.separador-horario {
+    margin-top: 15px; /* Altera este valor para controlar a distância entre os meses e o horário */
 }
