@@ -248,3 +248,72 @@ nav a.active {
 .separador-horario {
     margin-top: 15px; /* Altera este valor para controlar a distância entre os meses e o horário */
 }
+
+
+/***/
+
+/* O fundo da página de Eventos */
+.eventos-main {
+    background-color: #f26e11; /* O teu laranja padrão */
+    min-height: calc(100vh - 100px); /* Desconta a altura do menu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+/* Contentor que separa o título do FAQ em duas colunas */
+.eventos-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Divisão proporcional de espaço entre os dois lados */
+    gap: 80px; /* Grande espaço de separação no meio conforme a imagem */
+    width: 85%;
+    max-width: 1200px;
+    align-items: start; /* Alinha o topo dos dois blocos */
+}
+
+/* Estilo do título "EVENTOS" à esquerda */
+.titulo-pag-eventos {
+    font-family: 'Fraunces', serif; /* A tua fonte estilo Tan Buster */
+    font-weight: 900;
+    font-style: italic;
+    color: #8ae639; /* Verde-alface */
+    font-size: 85px; /* Bem gigante e chamativo */
+    margin: 0;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+/* Bloco que segura as perguntas */
+.eventos-faq-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaço generoso entre cada bloco de pergunta/resposta */
+}
+
+/* Cada grupo de pergunta/resposta */
+.faq-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Pequeno espaço entre a pergunta e a resposta */
+}
+
+/* As perguntas em verde */
+.faq-pergunta {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700; /* Bold para destacar bem */
+    color: #8ae639;   /* Verde-alface igual ao título */
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* As respostas em branco */
+.faq-resposta {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400; /* A tua DM Sans Regular do Canva */
+    color: #ffffff;   /* Branco puro para leitura limpa */
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.5;
+}
