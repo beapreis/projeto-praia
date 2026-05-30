@@ -1,0 +1,70 @@
+body{
+    background-color: #f56f11;
+}
+
+/* Reset básico para remover margens indesejadas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do fundo e do ecrã inteiro */
+body {
+    background-color: #f26e11; /* O laranja vibrante da imagem */
+    font-family: 'Arial Black', Impact, sans-serif; /* Fonte grossa para o menu */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilização do Menu Superior */
+header {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    display: flex;
+    width: 80%; /* Largura do menu em relação ao ecrã */
+    max-width: 900px;
+    justify-content: center; /* Centra os botões espaçados no meio do ecrã */
+}
+
+.nav-item {
+    width: 160px; /* Define o tamanho horizontal de cada tracejado */
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px 0;
+    
+    /* Mantém as tuas linhas tracejadas acima e abaixo de cada botão */
+    border-top: 1px dashed rgba(255, 255, 255, 0.4);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+    margin: 0 8px; 
+}
+
+/* Efeito visual discreto ao passar o rato nos botões */
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Centralização Absoluta do Logótipo */
+.hero-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px; /* Desvia ligeiramente para cima para equilibrar visualmente */
+}
+
+.main-logo {
+    max-width: 95%; /* Garante que em ecrãs pequenos a imagem não sai das bordas */
+    width: 950px;
+    height: auto;
+    object-fit: contain;
+}
