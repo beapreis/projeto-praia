@@ -2,14 +2,12 @@ body{
     background-color: #f56f11;
 }
 
-/* Reset básico para remover margens indesejadas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configuração do fundo e do ecrã inteiro */
 body {
     background-color: #f26e11; /* O laranja vibrante da imagem */
     font-family: 'Arial Black', Impact, sans-serif; /* Fonte grossa para o menu */
@@ -28,29 +26,11 @@ header {
 
 .navbar {
     display: flex;
-    width: 80%; /* Largura do menu em relação ao ecrã */
+    width: 80%;
     max-width: 900px;
-    justify-content: center; /* Centra os botões espaçados no meio do ecrã */
-}
-
-.nav-item {
-    width: 160px; /* Define o tamanho horizontal de cada tracejado */
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 15px 0;
-    
-    /* Mantém as tuas linhas tracejadas acima e abaixo de cada botão */
-    border-top: 1px dashed rgba(255, 255, 255, 0.4);
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
-    margin: 0 8px; 
-}
-
-/* Efeito visual discreto ao passar o rato nos botões */
-.nav-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
 }
 
 /* Centralização Absoluta do Logótipo */
@@ -67,4 +47,133 @@ header {
     width: 950px;
     height: auto;
     object-fit: contain;
+}
+
+/* Estilo geral para todos os links do menu */
+nav a {
+    width: 170px;
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+    background-color: #ffffff; 
+    color: #f26e11;
+    border-radius: 8px;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 12px 0;
+    margin: 0 15px; 
+    text-decoration: none;
+}
+
+nav a.active {
+    background-color: #90ea38; /* A cor verde vibrante */
+    color: white; /* Mantém o texto branco no fundo verde */
+}
+
+
+/***/
+
+
+.sobre-container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto; /* Removemos a margem do topo antiga */
+    gap: 40px; 
+    
+    /* MÁGICA AQUI: O ecrã tem 100vh de altura. Tiramos 100px para o menu superior. 
+       Isto força o contentor a ir até ao fundo da página! */
+    height: calc(100vh - 100px); 
+    
+    align-items: stretch; /* Garante que os dois lados esticam até ao fundo */
+}
+
+.sobre-esquerdo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empurra a foto para colar mesmo no fundo da página */
+}
+
+.titulo-sobre {
+    color: #f56f11;
+    font-size: 70px; 
+    font-family: 'Arial Black', Impact, sans-serif;
+    margin-top: 20px;
+}
+
+.foto-sobre {
+    width: 100%;         /* Ocupa a largura total do bloco esquerdo */
+    max-width: 450px;    /* Define um limite para a foto não ficar gigante em ecrãs enormes */
+    align-self: flex-start; /* Alinha à esquerda */
+
+}
+
+.sobre-direito {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    
+    /* Como o container agora vai até ao fundo, isto centra os cartões na página perfeita verticalmente */
+    justify-content: center; 
+    
+    gap: 25px; 
+}
+
+.cartao-info {
+    background-color: #90ea38;
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    gap: 25px; /* Espaço entre o subtítulo e o texto descritivo */
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra muito subtil */
+}
+
+.subtitulo-cartao {
+    color: #f56f11;
+    font-size: 20px;
+    font-family: 'Arial Black', sans-serif;
+    width: 30%; /* Força o título a quebrar linhas se for grande */
+    line-height: 1.2;
+}
+
+.texto-cartao {
+    color: #f56f11;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    width: 70%;
+    line-height: 1.4;
+}
+
+.nav-logo-link {
+    margin: 0 30px; /* Dá um espaçamento extra (30px) para os botões não sufocarem o logo */
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.nav-logo-link:hover {
+    transform: scale(1.1); /* O logo cresce ligeiramente ao passar o rato */
+}
+
+/* Tamanho do logo no meio da barra */
+.mini-logo {
+    height: 75px; /* Podes aumentar ou diminuir aqui para controlar o impacto do logo no meio */
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-logo-link {
+    margin: 0 30px; /* Espaço para os botões não colarem no logo */
+    background: none; /* À PROVA DE BALA: Garante que não há retângulos aqui */
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
 }
