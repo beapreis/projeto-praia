@@ -95,23 +95,23 @@ nav a.active {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Empurra a foto para colar mesmo no fundo da página */
+    justify-content: center; /* Centra verticalmente no meio da secção */
+    align-items: center;     /* Centra horizontalmente no meio da secção */
+    text-align: center;      /* Garante que o texto quebra centrado */
+    min-height: 60vh;        /* Dá uma altura mínima para ele respirar no meio do ecrã */
+    width: 100%;             /* Ocupa a largura total já que eliminámos o lado direito */
+    padding: 40px 20px;      /* Margem de segurança para telemóveis */
 }
 
+/* 2. O teu título customizado */
 .titulo-sobre {
     font-family: 'Fraunces', serif;
-    font-weight: 900;  
-    font-size: 75px;        
-    color: #90ea38;         
+    font-weight: 900;
+    font-size: 75px;
+    color: #90ea38;
     line-height: 1.1;
     letter-spacing: -1px;
-}
-
-.foto-sobre {
-    width: 100%;         /* Ocupa a largura total do bloco esquerdo */
-    max-width: 450px;    /* Define um limite para a foto não ficar gigante em ecrãs enormes */
-    align-self: flex-start; /* Alinha à esquerda */
-    margin-top: 15px;
+    margin-bottom: 20px;     /* Dá espaço para o parágrafo de texto que vais pôr por baixo */
 }
 
 .sobre-direito {
@@ -231,8 +231,9 @@ nav a.active {
 .label-contato {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    color: #ffffff;
+    color: #f26e11;
     font-size: 18px;
+    margin-top: 8px;
 }
 
 /* Informações escritas */
@@ -243,10 +244,15 @@ nav a.active {
     text-decoration: none;
     font-size: 18px;
     line-height: 1.4; /* Dá espaço entre linhas caso o texto quebre, como no horário */
+    margin-top: 8px;
 }
 
 .separador-horario {
-    margin-top: 15px; /* Altera este valor para controlar a distância entre os meses e o horário */
+    margin-top: 45px; /* Altera este valor para controlar a distância entre os meses e o horário */
+}
+
+.separador{
+    margin-top: 35px;
 }
 
 
@@ -295,7 +301,7 @@ nav a.active {
 .faq-item {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Pequeno espaço entre a pergunta e a resposta */
+    gap: 5x; /* Pequeno espaço entre a pergunta e a resposta */
 }
 
 /* As perguntas em verde */
@@ -316,4 +322,128 @@ nav a.active {
     font-size: 18px;
     margin: 0;
     line-height: 1.5;
+}
+
+
+/***/
+
+.menu-layout-main {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* O título "MENU" centrado no topo */
+.menu-principal-titulo {
+    font-family: 'Arial Black', Impact, sans-serif; /* Fonte grossa e geométrica como a imagem */
+    color: #f26e11; /* O teu laranja */
+    font-size: 70px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+/* A estrutura de 3 colunas e 2 linhas */
+.menu-grid-contentor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanhos iguais */
+    gap: 25px; /* Espaço de separação entre os cartões */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Estilo base de todos os cartões */
+.cartao-menu {
+    background-color: #8ae639; /* Um verde um pouco mais claro para destacar do fundo, igual à imagem */
+    border: 2px solid #ffffff; /* Borda fina branca elegante */
+    border-radius: 40px;       /* Cantos super arredondados */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centra o conteúdo na vertical */
+    align-items: center;       /* Centra o conteúdo na horizontal */
+    text-align: center;        /* Centra as linhas de texto */
+    min-height: 240px;         /* Garante que todos os cartões têm a mesma altura */
+    box-sizing: border-box;
+}
+
+/* Variante para os Cartões Azuis (Combos) */
+.cartao-menu.cartao-azul {
+    background-color: #0091eb; /* O teu azul-tropical vibrante */
+    border: 2px solid #ffffff; /* Borda fina branca elegante */
+    border-radius: 40px;       /* Cantos super arredondados */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centra o conteúdo na vertical */
+    align-items: center;       /* Centra o conteúdo na horizontal */
+    text-align: center;        /* Centra as linhas de texto */
+    min-height: 240px;         /* Garante que todos os cartões têm a mesma altura */
+    box-sizing: border-box;
+}
+
+/* Títulos dos cartões normais (Laranja) */
+.cartao-titulo-laranja {
+    font-family: 'Arial Black', Impact, sans-serif;
+    color: #f26e11;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Títulos dos cartões azuis (Branco) */
+.cartao-titulo-branco {
+    font-family: 'Arial Black', Impact, sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Textos dos cartões normais (Verde Escuro/Oliva para contraste) */
+.cartao-texto {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400; /* O teu DM Sans Regular do Canva */
+    color: #5c9e1e;   /* Um tom de verde escuro para manter a leitura impecável */
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Textos dos cartões azuis (Branco) */
+.cartao-texto-branco {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700; /* Bold para destacar o interior do combo */
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Estilo do preço para os cartões verdes (Laranja e Grosso) */
+.cartao-preco {
+    font-family: 'Arial Black', Impact, sans-serif;
+    color: #f26e11;
+    font-size: 22px;
+    margin-top: 15px; /* Cria o espaço em baixo do texto anterior */
+}
+
+/* Estilo do preço para os cartões azuis (Branco e Grosso) */
+.cartao-preco-branco {
+    font-family: 'Arial Black', Impact, sans-serif;
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 15px; /* Cria o espaço em baixo do texto anterior */
+}
+
+.preco-linha {
+    font-family: 'Arial Black', Impact, sans-serif;
+    color: #f26e11; /* O teu laranja padrão */
+    font-size: 19px; /* Ligeiramente maior que o texto para saltar à vista */
 }
